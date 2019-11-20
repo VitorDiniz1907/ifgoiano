@@ -139,10 +139,6 @@
                                                         //var_dump($i);
                                                         array_push($_SESSION['itens'], serialize($i));
                                                     }
-                                                    
-                                                   
-                                                    
-
                                                 }
 
                                                 

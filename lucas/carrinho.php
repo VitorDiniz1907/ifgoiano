@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once "title.php";
+    require_once "./banco/aux.class.php";
     require_once "./banco/daoUsuario.class.php";
     require_once "./banco/usuario.class.php";
 
@@ -99,15 +100,29 @@
                                         <tbody>
                                             <?php
                                                 
-                                                if(isset($_SESSION['itens'])){
+                                                //if(isset($_SESSION['itens'])){
                                                     if(isset($_GET['idMed'])){
                                                         $id = $_GET['idMed'];
                                                         unset($_SESSION['itens'][$id]);
                                                         echo "<script>window.locaiton.href='encaminhar.php'</script>";
                                                         
                                                     }
-                                                    foreach ($_SESSION['itens'] as $key => $value) {
-                                                        echo"<form method='POST' action='carrinho.php'>";
+                                                    $db = new COnexao();
+                                                    $con = $db->connectDB();
+                                                    $sql = "SELECT `medicamento`, `qnt`, `user` FROM `aux` WHERE `user` = " . unserialize($_SESSION['usuario'])->getId();
+                                                    $result = mysqli_query($con, $sql);
+
+                                                    var_dump($result);
+                                                    
+                                                    /*if(mysqli_num_rows($result) > 0 ){
+                                                        while($row = mysqli_fetch_assoc($result)){
+                                                            echo $row['medicamento'];
+                                                        }
+                                                    }*/
+                                                    //foreach ($_SESSION['itens'] as $key => $value) {
+
+
+                                                        /*echo"<form method='POST' action='carrinho.php'>";
                                                         
                                                         $daoMedicamento = new DaoMedicamento();
                                                         $medicamento = $daoMedicamento->seleciona(unserialize($value)->getIdMedicamento());
@@ -121,11 +136,11 @@
                                                         <td>{$valor}</td>
                                                         <td><a class=' btn blue accent-4' href='?idMed={$key}'><i class='material-icons'> delete </i></a></td>
                                                         </tr>
-                                                        </form>";
+                                                        </form>";*/
                                                         
-                                                    }
+                                                    //}
                                                         
-                                                }
+                                                //}
                                                 //if(isset($_POST['del'])){
                                                     
                                                 //}
