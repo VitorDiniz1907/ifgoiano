@@ -1,0 +1,13 @@
+Com root
+Login: pedro.lucas.rv@hotmail.com / pedrolucasrv22@gmail.com
+Senha: 12303
+
+Sem root
+Login: marlovi@teste.com
+Senha: 12345
+
+Sem root
+Login: douglas@teste.com.br
+Senha: 12345
+
+Senhas dos Usuários Vitor Diniz e Pedro é: 123
