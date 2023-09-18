@@ -1,0 +1,13 @@
+int inserir_inicio(No **lista, int valor);
+int inserir_fim(No **lista, int valor);
+int inserir_ordenado(No **lista, int valor);
+int inserir_na_posicao(No **lista, int valor, int pos);
+int inserir_apos(No **lista, int valor, int apos);
+int remover_inicio(No **lista);
+int remover_fim(No **lista);
+int remover_por_valor(No **lista, int valor);
+int remover_na_posicao(No **lista, int pos);
+void concatenar_lista(No **lista1, No **lista2);
+void intercalar_lista(No **lista1, No **lista2);
+int buscar_elemento(No **lista);
+void mostrar_lista(No **lista);
