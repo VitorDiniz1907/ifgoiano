@@ -83,7 +83,7 @@ int main(){
 	
 	mostrar_lista(&l);
 	
-	if (verificar_integridade(&l))
+	if (verificar_integridade(&l))//Verifica se a lista está indo e voltando durante todo o percurso.
 		printf("Lista integra.\n");
 	else
 		printf("Lista quebrada.\n");
