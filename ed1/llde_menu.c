@@ -7,8 +7,7 @@ typedef struct no
     struct no *prox, *ant;
 } No;
 
-int inserir_inicio_llde(No **l, int vlr)
-{
+int inserir_inicio_llde(No **l, int vlr){
     No *novo;
     novo = (No *)malloc(sizeof(No));
     if (novo == NULL)
